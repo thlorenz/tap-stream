@@ -57,34 +57,3 @@ module.exports = tap;
 
 if (module.parent) return;
 
-var Stream = require('stream');
-
-function objectStream () {
-  var s = new Stream()
-    , objects = 0;
- 
-  var iv = setInterval(
-      function () {
-        s.emit('data', { 
-            id: objects
-          , created: new Date()
-          , nest: { 
-                name: 'yellow rumped warbler'
-              , age: 1
-              , egg: { name: 'unknown' , age: 0 }
-              } 
-          }
-        , 4
-        );
-
-        if (++objects === 2) {
-            s.emit('end');
-            clearInterval(iv);
-        }
-      }
-    , 200);
-  return s;
-}
-
-objectStream().pipe(tap(2));
-
