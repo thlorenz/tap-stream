@@ -1,6 +1,7 @@
 {
   "name": "tap-stream",
   "version": "0.0.0",
+  "author": "Thorsten Lorenz <thlorenz@gmx.de> (http://thlorenz.com)",
   "description": "Taps a nodejs stream and prints the data that's coming through.",
   "main": "index.js",
   "directories": {
@@ -20,7 +21,6 @@
     "print",
     "inspect"
   ],
-  "author": "Thorsten Lorenz",
   "license": "BSD",
   "dependencies": {
     "through": "~1.1.0"
