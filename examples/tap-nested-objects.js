@@ -28,7 +28,7 @@ function objectStream () {
   return s;
 }
 
-//objectStream().pipe(tap(2));
+objectStream().pipe(tap(2));
 
 objectStream()
   .pipe(tap(function customLog (data) {
