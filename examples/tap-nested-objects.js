@@ -28,5 +28,12 @@ function objectStream () {
   return s;
 }
 
-objectStream().pipe(tap(2));
+//objectStream().pipe(tap(2));
+
+objectStream()
+  .pipe(tap(function customLog (data) {
+      var nest = data.nest;
+      console.log ('Bird: %s, id: %s, age: %s, layed egg: %s', nest.name, data.id, nest.age, nest.egg !== undefined);
+    })
+  );
 
