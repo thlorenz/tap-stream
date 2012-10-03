@@ -23,7 +23,7 @@ function defaultLog (depth) {
   };
 }
 
-// invoke four ways:
+// invoke three ways:
 //  tap ()
 //  tap (depth)
 //  tap (log)
@@ -54,6 +54,3 @@ function tap (arg0) {
 }
 
 module.exports = tap;
-
-if (module.parent) return;
-
