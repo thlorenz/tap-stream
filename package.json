@@ -1,6 +1,6 @@
 {
   "name": "tap-stream",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Thorsten Lorenz <thlorenz@gmx.de> (http://thlorenz.com)",
   "description": "Taps a nodejs stream and prints the data that's coming through.",
   "main": "index.js",
