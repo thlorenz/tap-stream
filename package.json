@@ -1,0 +1,31 @@
+{
+  "name": "tap-stream",
+  "version": "0.0.0",
+  "description": "Taps a nodejs stream and prints the data that's coming through.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node tap ./test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thlorenz/tap-stream.git"
+  },
+  "keywords": [
+    "stream",
+    "streams",
+    "log",
+    "print",
+    "inspect"
+  ],
+  "author": "Thorsten Lorenz",
+  "license": "BSD",
+  "dependencies": {
+    "through": "~1.1.0"
+  },
+  "devDependencies": {
+    "tap": "~0.3.1"
+  }
+}
