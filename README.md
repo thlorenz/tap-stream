@@ -7,7 +7,7 @@ Taps a nodejs stream and prints the data that's coming through.
 Given an [object stream](#object-stream) we can print out objects passing through and control the detail via the
 depth parameter:
 
-## ```javascript
+```javascript
 objectStream().pipe(tap(0));
 ```
 
