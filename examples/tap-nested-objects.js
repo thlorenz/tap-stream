@@ -16,7 +16,6 @@ function objectStream () {
               , egg: { name: 'unknown' , age: 0 }
               } 
           }
-        , 4
         );
 
         if (++objects === 2) {
