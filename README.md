@@ -1,4 +1,4 @@
-# tap-stream
+# tap-stream [![Build Status](https://secure.travis-ci.org/thlorenz/tap-stream.png)](http://travis-ci.org/thlorenz/tap-stream)
 
 Taps a nodejs stream and prints the data that's coming through.
 
