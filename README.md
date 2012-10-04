@@ -1,6 +1,6 @@
 # tap-stream [![Build Status](https://secure.travis-ci.org/thlorenz/tap-stream.png)](http://travis-ci.org/thlorenz/tap-stream)
 
-Taps a nodejs stream and prints the data that's coming through.
+Taps a nodejs stream and logs the data that's coming through.
 
     npm install tap-stream
 

@@ -2,7 +2,7 @@
   "name": "tap-stream",
   "version": "0.1.0",
   "author": "Thorsten Lorenz <thlorenz@gmx.de> (http://thlorenz.com)",
-  "description": "Taps a nodejs stream and prints the data that's coming through.",
+  "description": "Taps a nodejs stream and logs the data that's coming through.",
   "main": "index.js",
   "directories": {
     "test": "test"
