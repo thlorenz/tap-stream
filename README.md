@@ -25,7 +25,7 @@ objectStream().pipe(tap(2));
 
 ![depth2](https://github.com/thlorenz/tap-stream/raw/master/assets/depth2.png)
 
-For even more control a custom log function be supplied:
+For even more control a custom log function may be supplied:
 
 ```javascript
 objectStream()
@@ -66,7 +66,7 @@ myStream
 
 ## Object stream
 
-Included here only to give context for above examples.
+Included in order to give context for above examples.
 
 ```javascript
 function objectStream () {
