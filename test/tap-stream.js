@@ -15,15 +15,15 @@ function objectStream () {
         s.emit('data', { id: objects, created: new Date() });
 
         if (++objects === 2) {
-            s.emit('end');
-            clearInterval(iv);
+          s.emit('end');
+          clearInterval(iv);
         }
       }
     , 20);
   return s;
 }
 
-test('tapping object stream that emits 2 objects', function (t) {
+test('tapping object stream that queues 2 objects', function (t) {
   var logged = []
     , piped = [];
 
@@ -38,7 +38,7 @@ test('tapping object stream that emits 2 objects', function (t) {
     .pipe(through(
         function write (data) {
           piped.push(data);
-          this.emit('data', data);
+          this.queue(data);
         }
       , function end (data) {
 
@@ -50,7 +50,7 @@ test('tapping object stream that emits 2 objects', function (t) {
 
           t.end();
           
-          this.emit('end');
+          this.queue(null);
         }
     ))
 })
@@ -58,7 +58,7 @@ test('tapping object stream that emits 2 objects', function (t) {
 /* The below doesn't work since pipe only writes one argument:
  *    https://github.com/joyent/node/blob/master/lib/stream.js#L36
  *
- * Since it uses EventEmitter whose 'emit' supports multiple args, this may change in the future - I hope so.
+ * Since it uses EventEmitter whose 'queue' supports multiple args, this may change in the future - I hope so.
  * Until then ...
  */
 var onDataInsidePipeWritesMultipleArgs = false;
@@ -77,7 +77,7 @@ function numberStream () {
   return s;
 }
 
-test('tapping stream that emits a number and a string one time', function (t) {
+test('tapping stream that queues a number and a string one time', function (t) {
   var logged = []
     , piped = [];
 
@@ -98,7 +98,7 @@ test('tapping stream that emits a number and a string one time', function (t) {
           t.equals({ n1: 1, n2: 2 }, piped[0], 'pipes both numbers');
           t.end();
           
-          this.emit('end');
+          this.queue('end');
         }
     ))
 })

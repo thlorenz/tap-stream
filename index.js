@@ -47,7 +47,7 @@ function tap (arg0) {
   return through(
     function write (data) {
       log(data);
-      this.emit('data', data);
+      this.queue(data);
     }
   );
 
